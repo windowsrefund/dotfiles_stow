@@ -1,3 +1,4 @@
+alias qb="qutebrowser --backend webengine"
 alias less=$PAGER
 alias zless=$PAGER
 alias vc="~/bin/vimcat"

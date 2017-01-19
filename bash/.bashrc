@@ -27,12 +27,12 @@ export FACTERLIB=$HOME/lib/facter:$FACTERLIB
 export PATH=${HOME}/bin:$PATH
 export MYGPGKEY=0xE8746802481AF0AE
 # arch-wiki-lite
-export wiki_browser=qutebrowser
+export wiki_browser="qutebrowser --backend webengine"
 export BROWSER=links
 if [[ -z "$AWS_ACCESS_KEY_ID" ]]; then
   [[ -f ~/.aws_keys ]] && . ~/.aws_keys
 fi
-[ -n "$DISPLAY" ] && export BROWSER=qutebrowser
+[ -n "$DISPLAY" ] && export BROWSER="qutebrowser --backend webengine"
 
 # Colors {{{2
 #Reset
