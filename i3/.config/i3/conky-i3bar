@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# i3wm.org/docs/user-contributed/conky-i3bar.html
+
+# Send the header so i3bar knows we use JSON
+echo '{ "version": 1 }'
+echo '['
+echo '[],'
+exec conky -c $HOME/.config/i3/conkyrc
+
+
+

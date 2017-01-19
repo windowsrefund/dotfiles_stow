@@ -1,0 +1,134 @@
+# vim: ft=config,tw=0,nowrap
+background            no
+out_to_console        yes
+out_to_x              no
+double_buffer         yes
+short_units           yes
+update_interval       3.0
+if_up_strictness      link
+override_utf8_locale  yes
+max_text_width        0
+use_spacer            none
+cpu_avg_samples       2
+
+# bright red:   CF4f88
+# bright green: 73A6A6
+# dark white:   #899CA1
+
+# https://www.dropbox.com/s/9iysh2i0gadi4ic/icons.pdf
+#  { "full_text" :
+#    "", "color" : ${if_match ${exec ~/bin/pincached.sh}>0}"\#53A6A6"${else}"\#CF4F88"${endif},
+#    "separator" : false,
+#    "separator_block_width" : 7
+#  },\
+
+#  { "full_text" : "",
+#    "color" : "\#899CA1",
+#    "separator" : false,
+#    "separator_block_width" : 7
+#  },\
+#  { "full_text" :
+#    "${execi 5 awk '/speed:/ {print $2}' /proc/acpi/ibm/fan}",
+#    ${if_match ${execi 5 awk '/speed:/ {print $2}' /proc/acpi/ibm/fan}>3000}"color" : "\#CF4F88",${endif}
+#    "separator" : false,
+#    "separator_block_width" : 7
+#  },\
+TEXT
+[\
+  ${if_gw}
+  { "full_text" : \
+    "${if_match ${execi 14400 ~/bin/pacman_waiting.sh | wc -l}>0}",\
+    "color" : "\#914E89${endif}",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "IGXT",
+    "separator" : false,
+    "separator_block_width" : 7,
+    "color" : "\#899CA1"
+  },\
+  { "full_text" : "${execi 300 ~/bin/stock-conky.sh last igxt}",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "HEMP",
+    "separator" : false,
+    "separator_block_width" : 7,
+    "color" : "\#899CA1"
+  },\
+  { "full_text" : "${execi 300 ~/bin/stock-conky.sh last hemp}",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  ${endif}
+  { "full_text" : "",
+    "separator" : false,
+    "separator_block_width" : 7,
+    "color" : "\#899CA1"
+  },\
+  { "full_text" : "${fs_free_perc /home}%",
+    ${if_match ${fs_free_perc /home}<10}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "",
+    "color" : "\#899CA1",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" :
+    "${if_up wlp3s0}${wireless_essid wlp3s0} ${wireless_bitrate wlp3s0} ${wireless_link_qual_perc wlp3s0}%${else}down${endif}",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "",
+    "color" : "\#899CA1",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${memperc}%",
+    ${if_match ${memperc}>90}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "",
+    "color" : "\#899CA1",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${freq_g 1}GHz",
+    ${if_match ${cpu cpu1}>80}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${freq_g 2}GHz",
+    ${if_match ${cpu cpu2}>80}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${freq_g 3}GHz",
+    ${if_match ${cpu cpu3}>80}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${freq_g 4}GHz",
+    ${if_match ${cpu cpu3}>80}"color" : "\#CF4F88",${endif}
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "",
+    "color" : "\#899CA1",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${exec acpi | head -1 | cut -d' ' -f3-}",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "",
+    "color" : "\#899CA1",
+    "separator" : false,
+    "separator_block_width" : 7
+  },\
+  { "full_text" : "${time %a %d %b %H:%M}" }
+],
