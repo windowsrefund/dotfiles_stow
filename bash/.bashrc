@@ -20,19 +20,19 @@ shopt -s histappend         # append to (not overwrite) the history file
 shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
 # Variables {{{1
-export MYRUBYVER="ruby-2.1.5"
+#export MYRUBYVER="ruby-2.1.5"
 export EDITOR=vim
 export PAGER=vimpager
 export FACTERLIB=$HOME/lib/facter:$FACTERLIB
 export PATH=${HOME}/bin:$PATH
 export MYGPGKEY=0xE8746802481AF0AE
 # arch-wiki-lite
-export wiki_browser=luakit
+export wiki_browser=qutebrowser
 export BROWSER=links
 if [[ -z "$AWS_ACCESS_KEY_ID" ]]; then
   [[ -f ~/.aws_keys ]] && . ~/.aws_keys
 fi
-[ -n "$DISPLAY" ] && export BROWSER=luakit
+[ -n "$DISPLAY" ] && export BROWSER=qutebrowser
 
 # Colors {{{2
 #Reset
