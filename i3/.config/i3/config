@@ -131,7 +131,7 @@ colors {
 # xprop | awk '/WM_CLASS/{print $4}'
 assign [class="^luakit$"] $ws3
 assign [class="^Icecat$"] $ws3
-assign [class="^Firefox$"] $ws3
+assign [class="^qutebrowser$" $ws3
 assign [class="^Zathura$"] $ws1
 assign [class="^FBReader$"] $ws1
 
