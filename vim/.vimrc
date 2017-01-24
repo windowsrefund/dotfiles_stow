@@ -240,7 +240,7 @@ if has("autocmd")
     au FileType python setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
     au BufWinLeave *.py setlocal foldexpr< foldmethod<
     au BufWritePre *.py if !filereadable(expand('%')) | let b:is_new = 1 | endif
-    au BufWritePost *.py if get(b:, 'is_new', 0) silent execute '!chmod +x %' | endif
+    au BufWritePost *.py if get(b:, 'is_new', 0) | silent execute '!chmod +x %' | endif
   augroup END
 
 endif
