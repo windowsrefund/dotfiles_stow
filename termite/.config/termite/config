@@ -1,0 +1,89 @@
+# vim: ft=config
+# options {{{1
+[options]
+font                = DejaVu Sans Mono 12.5
+# font                = Envy Code R 10
+# font                = InconsolataG 12
+resize_grip         = true
+scroll_on_output    = false
+audible_bell        = false
+visible_bell        = false
+allow_bold          = false
+scroll_on_keystroke = true
+mouse_autohide      = true
+dynamic_title       = true
+urgent_on_bell      = true
+clickable_url       = true
+search_wrap         = true
+scrollback_lines    = 10000
+browser             = qutebrowser
+
+# 0.0: opaque, 1.0: transparent
+transparency        = 0.0
+pseudo_transparency = false
+
+# "system", "on" or "off"
+cursor_blink        = off
+
+# "block", "underline" or "ibeam"
+cursor_shape        = block
+
+# word characters used for word selection
+# (default if unset: all graphic non-punctuation/space characters)
+word_chars          = -A-Za-z0-9,./?%&#:_=+@~
+# }}}1
+# colors {{{1
+[colors]
+
+# colors from color0 to color254 can be set
+# black dark/light {{{2
+color0 = #262626
+color8 = #5e5e5e
+# }}}2
+
+# red dark/light {{{2
+color1 = #8a2f58
+color9 = #cf4f88
+
+# green dark/light {{{2
+color2 = #287373
+color10 = #53a6a6
+
+# yellow dark/light {{{2
+color3 = #914e89
+color11 = #bf85cc
+# }}}2
+# blue dark/light {{{2
+color4 = #395573
+color12 = #4779b3
+# }}}2
+# magenta dark/light {{{2
+color5 = #5e468c
+color13 = #7f62b3
+# }}}2
+# cyan dark/light {{{2
+color6 = #2b7694
+color14 = #47959e
+# }}}2
+# white dark/light {{{2
+color7 = #899CA1
+color15 = #C0C0C0
+# }}}2
+
+background = #222222
+foreground = #999999
+#cursor = #000000
+# }}}1
+# hints {{{1
+[hints]
+# http://yahoo.com
+font          = Dejavu Sans Mono 10
+foreground    = #000000
+background    = #899CA1
+# active_foreground = #000000
+# active_background = #899CA1
+padding = 3
+border = #FFFFFF
+border_width = 1
+roundness = 0
+# }}}1
