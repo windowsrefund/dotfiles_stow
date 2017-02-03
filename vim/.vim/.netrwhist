@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/akosmin/safe'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/akosmin/sailthru/github/ansible/group_vars'
+let g:netrw_dirhist_2='/home/akosmin/sailthru/github/ansible'
+let g:netrw_dirhist_3='/home/akosmin/sailthru/github/ansible/inventory'
+let g:netrw_dirhist_4='/home/akosmin/sailthru/github/ansible/group_vars'
+let g:netrw_dirhist_5='/home/akosmin/sailthru/github/ansible/roles/ansible/tasks'
+let g:netrw_dirhist_6='/home/akosmin/sailthru/github/ansible/roles/ansible'
+let g:netrw_dirhist_7='/home/akosmin/sailthru/github/ansible/roles/ansible/vars'
+let g:netrw_dirhist_8='/tmp/vimpager_4716'
+let g:netrw_dirhist_9='/tmp'
