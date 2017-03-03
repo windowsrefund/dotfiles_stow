@@ -206,10 +206,10 @@ wmip() { printf "External IP: %s\n" $(curl -s http://ifconfig.me) ;}
 
 # chruby
 
-[[ -s /usr/share/chruby/chruby.sh ]] && {
-. /usr/share/chruby/chruby.sh
-chruby $MYRUBYVER
-}
+#[[ -s /usr/share/chruby/chruby.sh ]] && {
+#. /usr/share/chruby/chruby.sh
+#chruby $MYRUBYVER
+#}
 
 # }}}1
 
