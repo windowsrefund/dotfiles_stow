@@ -116,7 +116,7 @@ bar {
   # status_command i3status
   status_command $HOME/.config/i3/conky-i3bar
   position top
-colors {
+  colors {
   background          #222222
   statusline          #5E5E5E
   # separator           #222222
@@ -124,7 +124,7 @@ colors {
   active_workspace    #333333 #333333 #999999
   inactive_workspace  #333333 #333333 #999999
   urgent_workspace    #8a2f58 #8a2f58 #ffffff
-}
+  }
 }
 
 # use this and then click on a window
