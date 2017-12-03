@@ -236,3 +236,4 @@ if [[ $TERM == "linux" ]]; then
   clear                    # bring us back to default input colors
 fi
 
+eval "$(direnv hook bash 2> /dev/null)"
