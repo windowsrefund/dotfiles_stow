@@ -14,6 +14,7 @@ alias mutt-nycpatriot="MUTT_PROFILE=nycpatriot mutt"
 alias mutt-sailthru="MUTT_PROFILE=sailthru mutt"
 alias calcurse-sailthru="calcurse -D ~/.calcurse-sailthru"
 alias sf="safe.sh"
+alias ssh='TERM=screen-256color ssh'
 
 # git
 alias ga='git add'

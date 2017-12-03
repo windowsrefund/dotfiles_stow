@@ -21,10 +21,10 @@ shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginn
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
 # Variables {{{1
 #export MYRUBYVER="ruby-2.1.5"
+export NOSE_REDNOSE=1
 export EDITOR=vim
 export PAGER=vimpager
-export FACTERLIB=$HOME/lib/facter:$FACTERLIB
-export PATH=${HOME}/bin:$PATH
+export PATH=${HOME}/bin:${HOME}/.local/bin:${PATH}
 export MYGPGKEY=0xE8746802481AF0AE
 # arch-wiki-lite
 export wiki_browser="qutebrowser --backend webengine"
@@ -198,25 +198,23 @@ wmip() { printf "External IP: %s\n" $(curl -s http://ifconfig.me) ;}
 #
 # Source {{{1
 
-# tmuxinator
-[[ -s $HOME/bin/tmuxinator.bash ]] && . $HOME/bin/tmuxinator.bash
-
-# command-not-found on Arch GNU/Linux
-[[ -r /usr/share/doc/pkgfile/command-not-found.bash ]] && . /usr/share/doc/pkgfile/command-not-found.bash
-
-# chruby
-
-#[[ -s /usr/share/chruby/chruby.sh ]] && {
-#. /usr/share/chruby/chruby.sh
-#chruby $MYRUBYVER
-#}
-
-# }}}1
-
 if [ -f $HOME/.gpg-agent-info ]; then
   .  $HOME/.gpg-agent-info
   export GPG_AGENT_INFO
 fi
+
+if [[ -s $HOME/.local/bin/virtualenvwrapper.sh ]]; then
+  . $HOME/.local/bin/virtualenvwrapper.sh
+fi
+
+[[ -s $HOME/bin/tmuxinator.bash ]] && . $HOME/bin/tmuxinator.bash
+
+# command-not-found on Arch GNU/Linux
+if [[ -r /usr/share/doc/pkgfile/command-not-found.bash ]]; then
+  . /usr/share/doc/pkgfile/command-not-found.bash
+fi
+
+# }}}1
 
 if [[ $TERM == "linux" ]]; then
   echo -en "\033]P0000000" # black
@@ -238,8 +236,3 @@ if [[ $TERM == "linux" ]]; then
   clear                    # bring us back to default input colors
 fi
 
-PATH="/home/akosmin/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/akosmin/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/akosmin/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/akosmin/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/akosmin/perl5"; export PERL_MM_OPT;
