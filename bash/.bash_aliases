@@ -1,3 +1,4 @@
+alias tmux="direnv exec / tmux"
 alias qb="qutebrowser --backend webengine"
 alias less=$PAGER
 alias zless=$PAGER
