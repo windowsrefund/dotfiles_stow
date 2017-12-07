@@ -16,6 +16,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
+Plugin 'rkulla/pydiction'
 
 " All plugins must be added before this line
 call vundle#end()
@@ -198,6 +199,8 @@ endif
 let g:mirodark_disable_color_approximation=1
 let g:mirodark_enable_higher_contrast_mode=0
 let g:GPGPreferArmor=1
+let g:pydiction_location='/home/akosmin/.vim/bundle/pydiction/complete-dict'
+
 
 " autocommands {{{1
 if has("autocmd")
