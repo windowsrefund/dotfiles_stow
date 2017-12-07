@@ -13,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 " other plugins on github
 Plugin 'jamessan/vim-gnupg'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 
 " All plugins must be added before this line
