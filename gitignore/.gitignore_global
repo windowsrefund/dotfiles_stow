@@ -1,0 +1,19 @@
+# Direnv stuff
+.direnv
+.envrc
+
+# Vim stuff
+*~
+*.swp
+*.swo
+*.netrwhist
+
+# Ansible stuff
+*.retry
+
+# Python/pytest
+__pycache__
+.cache
+*.egg-info
+
+
