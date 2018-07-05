@@ -1,0 +1,21 @@
+nj1:
+  auto-hosts: true
+  auto-nets: true
+  dns: true
+  remote: nj1-jump1.sailthru.com
+  subnets:
+  - 172.18.0.0/18
+ny1:
+  auto-hosts: true
+  auto-nets: true
+  dns: true
+  remote: ny1-jump1.sailthru.com
+  subnets:
+  - 192.168.4.0/24
+sailthru-cloud:
+  auto-hosts: true
+  auto-nets: true
+  dns: false
+  remote: jump.main.sailthru.cloud
+  subnets:
+  - 10.30.0.0/16
