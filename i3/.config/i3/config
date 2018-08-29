@@ -96,8 +96,7 @@ bindsym $mod+r reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec 'i3-msg exit'
-#bindsym Control+$mod+Delete exec i3lock -i ~/.lock.png
-bindsym Control+$mod+Delete exec ~/bin/lock
+bindsym Control+$mod+l exec ~/bin/lock
 
 bindsym $mod+Escape mode "resize"
 mode "resize" {
